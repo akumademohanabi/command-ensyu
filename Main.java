@@ -2,14 +2,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("身長(m)、体重(㎏)を表記してください。");
         Scanner sc = new Scanner(System.in);
-        double height = Double.parseDouble(sc.nextLine());
-        double weight = Double.parseDouble(sc.nextLine());
 
-        double BMI = weight / (height * height);
+	System.out.println("Aさんの身長(m)、体重(kg)を記入してください。");
+        double height1 = Double.parseDouble(sc.nextLine());
+        double weight1 = Double.parseDouble(sc.nextLine());
+
+	System.out.println("Bさんの身長(m)、体重(kg)を記入してください。");
+	double height2 = Double.parseDouble(sc.nextLine());
+	double weight2 = Double.parseDouble(sc.nextLine());
+
+
+        double BMI = weight1 / (height1 * height1);
         String sv = String.format("%.2f", BMI);
 
-        System.out.println("あなたのBMIは" + sv + "です。");
+	double BMI2 = weight2 / (height2 * height2);
+	String sv2 = String.format("%.2f", BMI2);
+
+        System.out.println("AさんのBMIは" + sv + "です。");
+	System.out.println("BさんのBMIは" + sv2 + "です。");
     }
 }
